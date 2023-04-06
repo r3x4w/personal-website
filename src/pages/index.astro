@@ -1,6 +1,9 @@
 ---
-import Counter from '../components/Counter'
+import MainLayout from '../layouts/MainLayout.astro';
+import Counter from '../components/Counter';
 ---
 
-<h1>Hello</h1>
-<Counter client:load />
+<MainLayout title="Home">
+	<h1 class="text-blue-600">Hello</h1>
+	<Counter client:load />
+</MainLayout>
