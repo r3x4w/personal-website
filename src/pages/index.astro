@@ -1,9 +1,19 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import Counter from '../components/Counter';
 ---
 
-<MainLayout title="Home">
-	<h1 class="text-blue-600">Hello</h1>
-	<Counter client:load />
+<MainLayout title='صفحه اصلی'>
+  <div class='text-center py-52 w-full'>
+    <h1 class='text-5xl pb-8'>من کی ام؟</h1>
+    <div class='space-y-4'>
+      <a href='/resume' class='btn btn-3d border-2  border-zinc-950 mx-1'
+        >بریم کشف کنیم</a
+      >
+      <a
+        href='#latestProjects'
+        class='btn text-zinc-950 border-2 border-zinc-950 hover:bg-zinc-100 mx-1'
+        >میشناسمت</a
+      >
+    </div>
+  </div>
 </MainLayout>

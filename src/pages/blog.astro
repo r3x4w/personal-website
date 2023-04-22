@@ -1,0 +1,105 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import placeholder from '../images/placeholder.jpeg'
+---
+
+<MainLayout title='بلاگ'>
+  <section class='pt-12'>
+    <div class='text-center pb-28'>
+      <h1 class='text-3xl pb-4 text-zinc-950'>جدیدترین پست ها</h1>
+      <p>در این قسمت می تونید به جدیدترین مقالات من دسترسی داشته باشید</p>
+    </div>
+      <div class='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+        <article>
+          <a href='#' class='block overflow-hidden'>
+            <img
+              src={placeholder}
+              alt=''
+              class='rounded-xl w-full transition-all ease-in-out hover:grayscale'
+            />
+            <div class='pt-4'>
+              <header>
+                <a href='#' class='text-sm'>دسته بندی</a>
+                <a
+                  href='#'
+                  class='transition-all ease-in hover:no-underline hover:opacity-90'>
+                  <h3 class='font-bold text-2xl'>عنوان پست</h3>
+                </a>
+              </header>
+              <p class='py-4 break-words'>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
+                soluta, itaque ipsam maxime officia magni praesentium tempora ipsa
+                repudiandae hic dicta omnis ab iste cum consequatur nam id
+                consectetur sint.
+              </p>
+            </div>
+            <footer class='text-sm text-zinc-500'>
+              <time datetime='۲۰۲۳-۰۳-۱۰'>۱۰ مارس ۲۰۲۳</time>
+              <!-- TODO: Calculate the reading time -->
+              <span>- خواندن ۲ دقیقه</span>
+            </footer>
+          </a>
+        </article>
+        <article>
+          <a href='#' class='block overflow-hidden'>
+            <img
+              src={placeholder}
+              alt=''
+              class='rounded-xl w-full transition-all ease-in-out hover:grayscale'
+            />
+            <div class='pt-4'>
+              <header>
+                <a href='#' class='text-sm'>دسته بندی</a>
+                <a
+                  href='#'
+                  class='transition-all ease-in hover:no-underline hover:opacity-90'>
+                  <h3 class='font-bold text-2xl'>عنوان پست</h3>
+                </a>
+              </header>
+              <p class='py-4 break-words'>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
+                soluta, itaque ipsam maxime officia magni praesentium tempora ipsa
+                repudiandae hic dicta omnis ab iste cum consequatur nam id
+                consectetur sint.
+              </p>
+            </div>
+            <footer class='text-sm text-zinc-500'>
+              <time datetime='۲۰۲۳-۰۳-۱۰'>۱۰ مارس ۲۰۲۳</time>
+              <!-- TODO: Calculate the reading time -->
+              <span>- خواندن ۲ دقیقه</span>
+            </footer>
+          </a>
+        </article>
+        <article>
+          <a href='#' class='block overflow-hidden'>
+            <img
+              src={placeholder}
+              alt=''
+              class='rounded-xl w-full transition-all ease-in-out hover:grayscale'
+            />
+            <div class='pt-4'>
+              <header>
+                <a href='#' class='text-sm'>دسته بندی</a>
+                <a
+                  href='#'
+                  class='transition-all ease-in hover:no-underline hover:opacity-90'>
+                  <h3 class='font-bold text-2xl'>عنوان پست</h3>
+                </a>
+              </header>
+              <p class='py-4 break-words'>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
+                soluta, itaque ipsam maxime officia magni praesentium tempora ipsa
+                repudiandae hic dicta omnis ab iste cum consequatur nam id
+                consectetur sint.
+              </p>
+            </div>
+            <footer class='text-sm text-zinc-500'>
+              <time datetime='۲۰۲۳-۰۳-۱۰'>۱۰ مارس ۲۰۲۳</time>
+              <!-- TODO: Calculate the reading time -->
+              <span>- خواندن ۲ دقیقه</span>
+            </footer>
+          </a>
+        </article>
+      </div>
+  </section>
+</MainLayout>

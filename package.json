@@ -13,6 +13,7 @@
     "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix"
   },
   "dependencies": {
+    "@astrojs/mdx": "^0.18.4",
     "@astrojs/react": "^2.1.1",
     "@astrojs/rss": "^2.3.2",
     "@astrojs/tailwind": "^3.1.1",
