@@ -1,13 +1,16 @@
 ---
-import Logo from '../../images/logo.svg';
+import LogoDark from '../../images/logo-dark.svg';
 
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);  
+const currentPath = pathname.slice(1);
 ---
 
 <header
-  class='flex justify-between max-w-5xl mx-auto w-full items-center p-4 pb-6 flex-0 relative my-2'>
-  <button type='button' class='p-2 hover:cursor-pointer md:hidden'>
+  class='flex-0 relative mx-auto my-2 flex w-full items-center justify-between p-4 pb-6 lg:max-w-5xl'>
+  <button
+    type='button'
+    class='z-40 p-2 transition-all duration-300 ease-in-out hover:cursor-pointer md:hidden'
+    id='toggleMenu'>
     <svg
       class='h-6 w-6'
       fill='none'
@@ -22,34 +25,147 @@ const currentPath = pathname.slice(1);
       <line x1='3' x2='21' y1='15.462' y2='15.462'></line>
     </svg>
   </button>
-    <img src={Logo} alt="Rexa's logo" class='w-8 transition-all ease-in hover:cursor-pointer hover:opacity-70' draggable='false' />
-  <nav class="hidden md:block">
-    <ul class="flex gap-x-6">
-      <li><a href="/" class={`d-menu-link ${currentPath === '' ? 'active' : ''}`}>
-        صفحه اصلی
-      </a></li>
-      <li><a href="/resume" class={`d-menu-link ${currentPath === 'resume' ? 'active' : ''}`}>
-        رزومه
-      </a></li>
-      <li><a href="/portfolio" class={`d-menu-link ${currentPath === 'portfolio' ? 'active' : ''}`}>
-          نمونه کار ها
-      </a></li>
-      <li><a href="/products" class={`d-menu-link ${currentPath === 'products' ? 'active' : ''}`}>
-        محصولات
-    </a></li>
-    <li><a href="/podcasts" class={`d-menu-link ${currentPath === 'podcasts' ? 'active' : ''}`}>
-      پادکست ها
-  </a></li>
-      <li><a href="/blog" class={`d-menu-link ${currentPath === 'blog' ? 'active' : ''}`}>
+  <div
+    class='fixed inset-0 z-30 flex hidden items-center justify-center bg-zinc-950/70'
+    id='mobileNavContainer'>
+    <nav
+      id='mobileNav'
+      class='w-4/5 animate-fadeInUp rounded-xl bg-white p-14 text-center shadow'>
+      <ul class='flex flex-col gap-6'>
+        <li>
+          <a
+            href='/'
+            class={`d-menu-link ${currentPath === '' ? 'active' : ''}`}>
+            صفحه اصلی
+          </a>
+        </li>
+        <li>
+          <a
+            href='/resume'
+            class={`d-menu-link ${
+              pathname.includes('resume') ? 'active' : ''
+            }`}>
+            رزومه
+          </a>
+        </li>
+        <li>
+          <a
+            href='/projects'
+            class={`d-menu-link ${
+              pathname.includes('projects') ? 'active' : ''
+            }`}>
+            پروژه ها
+          </a>
+        </li>
+        <li>
+          <a
+            href='/products'
+            class={`d-menu-link ${
+              pathname.includes('products') ? 'active' : ''
+            }`}>
+            محصولات
+          </a>
+        </li>
+        <li>
+          <a
+            href='/podcasts'
+            class={`d-menu-link ${
+              pathname.includes('podcasts') ? 'active' : ''
+            }`}>
+            پادکست ها
+          </a>
+        </li>
+        <li>
+          <a
+            href='/blog'
+            class={`d-menu-link ${pathname.includes('blog') ? 'active' : ''}`}>
+            بلاگ
+          </a>
+        </li>
+        <li>
+          <a
+            href='/contact'
+            class={`d-menu-link ${
+              pathname.includes('contact') ? 'active' : ''
+            }`}>
+            تماس با من
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <a href='/'>
+    <img
+      src={LogoDark}
+      alt="Rexa's logo"
+      class='w-8 transition-all ease-in hover:cursor-pointer hover:opacity-70'
+      draggable='false'
+      id='logo'
+    />
+  </a>
+  <nav class='hidden md:block'>
+    <ul class='flex gap-x-6'>
+      <li>
+        <a href='/' class={`d-menu-link ${currentPath === '' ? 'active' : ''}`}>
+          صفحه اصلی
+        </a>
+      </li>
+      <li>
+        <a
+          href='/resume'
+          class={`d-menu-link ${pathname.includes('resume') ? 'active' : ''}`}>
+          رزومه
+        </a>
+      </li>
+      <li>
+        <a
+          href='/projects'
+          class={`d-menu-link ${
+            pathname.includes('projects') ? 'active' : ''
+          }`}>
+          پروژه ها
+        </a>
+      </li>
+      <li>
+        <a
+          href='/products'
+          class={`d-menu-link ${
+            pathname.includes('products') ? 'active' : ''
+          }`}>
+          محصولات
+        </a>
+      </li>
+      <li>
+        <a
+          href='/podcasts'
+          class={`d-menu-link ${
+            pathname.includes('podcasts') ? 'active' : ''
+          }`}>
+          پادکست ها
+        </a>
+      </li>
+      <li>
+        <a
+          href='/blog'
+          class={`d-menu-link ${pathname.includes('blog') ? 'active' : ''}`}>
           بلاگ
-      </a></li>
-      <li><a href="/contact" class={`d-menu-link ${currentPath === 'contact' ? 'active' : ''}`}>
+        </a>
+      </li>
+      <li>
+        <a
+          href='/contact'
+          class={`d-menu-link ${pathname.includes('contact') ? 'active' : ''}`}>
           تماس با من
-      </a></li>
+        </a>
+      </li>
     </ul>
   </nav>
-  <button type='button' class='p-2 hover:cursor-pointer transition-all ease-in hover:text-zinc-950'>
+  <button
+    type='button'
+    class='p-2 text-zinc-500 transition-all ease-in hover:cursor-pointer hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50'
+    id='toggleDarkMode'>
     <svg
+      id='moonIcon'
       xmlns='http://www.w3.org/2000/svg'
       width='24'
       height='24'
@@ -59,35 +175,38 @@ const currentPath = pathname.slice(1);
       stroke-width='2'
       stroke-linecap='round'
       stroke-linejoin='round'
-      class='w-6 h-6'
+      class='hidden h-6 w-6'
       ><path d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'></path></svg
     >
-    <!-- <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='24'
-        height='24'
-        viewBox='0 0 24 24'
-        fill='none'
-        stroke='currentColor'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        class='w-6 h-6'
-        ><circle cx='12' cy='12' r='5'></circle><line
-          x1='12'
-          y1='1'
-          x2='12'
-          y2='3'></line><line x1='12' y1='21' x2='12' y2='23'></line><line
-          x1='4.22'
-          y1='4.22'
-          x2='5.64'
-          y2='5.64'></line><line x1='18.36' y1='18.36' x2='19.78' y2='19.78'
-        ></line><line x1='1' y1='12' x2='3' y2='12'></line><line
-          x1='21'
-          y1='12'
-          x2='23'
-          y2='12'></line><line x1='4.22' y1='19.78' x2='5.64' y2='18.36'
-        ></line><line x1='18.36' y1='5.64' x2='19.78' y2='4.22'></line></svg
-      > -->
+    <svg
+      id='sunIcon'
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      stroke-width='2'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+      class='hidden h-6 w-6'
+      ><circle cx='12' cy='12' r='5'></circle><line
+        x1='12'
+        y1='1'
+        x2='12'
+        y2='3'></line><line x1='12' y1='21' x2='12' y2='23'></line><line
+        x1='4.22'
+        y1='4.22'
+        x2='5.64'
+        y2='5.64'></line><line x1='18.36' y1='18.36' x2='19.78' y2='19.78'
+      ></line><line x1='1' y1='12' x2='3' y2='12'></line><line
+        x1='21'
+        y1='12'
+        x2='23'
+        y2='12'></line><line x1='4.22' y1='19.78' x2='5.64' y2='18.36'
+      ></line><line x1='18.36' y1='5.64' x2='19.78' y2='4.22'></line></svg
+    >
   </button>
 </header>
+
+<script src='../../scripts/header.js'></script>

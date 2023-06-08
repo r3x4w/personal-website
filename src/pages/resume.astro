@@ -8,41 +8,39 @@ import { Content as Favorites } from '../content/resume/favorites.mdx';
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title='پورتفلبو'>
+<MainLayout title='رزومه'>
   <section class='py-8' id='bioSection'>
-    <h2 class='text-2xl font-bold pb-6 arrow-left'>بیوگرافی</h2>
-    <p class='text-gray-700'>
+    <h2 class='arrow-left pb-6 text-2xl font-bold'>بیوگرافی</h2>
+    <p>
       <Biography />
     </p>
   </section>
   <section class='py-8' id='expSection'>
-    <h2 class='text-2xl font-bold pb-6 arrow-left'>سوابق شغلی</h2>
+    <h2 class='arrow-left pb-6 text-2xl font-bold'>سوابق شغلی</h2>
     <Exprience />
   </section>
   <section class='py-8' id='eduSection'>
-    <h2 class='text-2xl font-bold pb-6 arrow-left'>سوابق تحصیلی</h2>
+    <h2 class='arrow-left pb-6 text-2xl font-bold'>سوابق تحصیلی</h2>
     <Education />
   </section>
   <section class='py-8' id='skillsSection'>
-    <h2 class='text-2xl font-bold pb-6 arrow-left'>مهارت ها</h2>
-    <ul class='gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
+    <h2 class='arrow-left pb-6 text-2xl font-bold'>مهارت ها</h2>
+    <ul class='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
       <Skills />
     </ul>
   </section>
   <section class='py-8' id='langSection'>
-    <h2 class='text-2xl font-bold pb-6 arrow-left'>زبان ها</h2>
+    <h2 class='arrow-left pb-6 text-2xl font-bold'>زبان ها</h2>
     <p class='text-gray-700'>
-      <ul class='gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
+      <ul class='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
         <Languages />
       </ul>
     </p>
   </section>
   <section class='py-8' id='favSection'>
-    <h2 class='text-2xl font-bold pb-6 arrow-left'>علاقه مندی ها</h2>
-    <ul class='flex gap-2'>
+    <h2 class='arrow-left pb-6 text-2xl font-bold'>علاقه مندی ها</h2>
+    <ul class='flex flex-wrap gap-2'>
       <Favorites />
     </ul>
   </section>
 </MainLayout>
-
-

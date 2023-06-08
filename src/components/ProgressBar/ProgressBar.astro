@@ -1,12 +1,16 @@
 ---
-const {precent} = Astro.props;
+const { percent } = Astro.props;
 ---
 
-  <li class="space-y-2">
-    <p class="text-zinc-800">
-      <slot />
-    </p>
-    <div class="ring-2 ring-zinc-950 block w-full h-2 rounded-sm">
-      <div class="bg-zinc-950 w-1/2 h-2 rounded-l-sm"></div>
+<li class='space-y-2'>
+  <p class='font-medium text-zinc-800 dark:text-zinc-200'>
+    <slot />
+  </p>
+  <div
+    class='block h-2 w-full rounded-sm ring-2 ring-zinc-950 dark:ring-zinc-50'>
+    <div
+      class='h-2 rounded-l-sm bg-zinc-950 dark:bg-zinc-50'
+      style={`width: ${percent}%`}>
     </div>
-  </li>
+  </div>
+</li>

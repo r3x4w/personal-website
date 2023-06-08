@@ -1,105 +1,26 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import placeholder from '../images/placeholder.jpeg'
+import MainLayout from '../layouts/MainLayout.astro';
+import { gregorian_to_jalali, getJMonth } from '../utils/dateConverter';
+
+// const dscSortPosts = posts.sort((obj1, obj2) => {
+//   return new Date(obj2.frontmatter.publishDate) - new Date(obj1.frontmatter.publishDate)
+// })
 ---
 
 <MainLayout title='بلاگ'>
   <section class='pt-12'>
-    <div class='text-center pb-28'>
-      <h1 class='text-3xl pb-4 text-zinc-950'>جدیدترین پست ها</h1>
-      <p>در این قسمت می تونید به جدیدترین مقالات من دسترسی داشته باشید</p>
+    <div class='pb-28 text-center'>
+      <h1 class='pb-4 text-3xl text-zinc-950'>بلاگ</h1>
+      <p>
+        فعلا اینجا چیزی منتشر نمی کنم :( پست های زیر داخل ویرگول یا مدیوم منتشر
+        شده
+      </p>
     </div>
-      <div class='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-        <article>
-          <a href='#' class='block overflow-hidden'>
-            <img
-              src={placeholder}
-              alt=''
-              class='rounded-xl w-full transition-all ease-in-out hover:grayscale'
-            />
-            <div class='pt-4'>
-              <header>
-                <a href='#' class='text-sm'>دسته بندی</a>
-                <a
-                  href='#'
-                  class='transition-all ease-in hover:no-underline hover:opacity-90'>
-                  <h3 class='font-bold text-2xl'>عنوان پست</h3>
-                </a>
-              </header>
-              <p class='py-4 break-words'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
-                soluta, itaque ipsam maxime officia magni praesentium tempora ipsa
-                repudiandae hic dicta omnis ab iste cum consequatur nam id
-                consectetur sint.
-              </p>
-            </div>
-            <footer class='text-sm text-zinc-500'>
-              <time datetime='۲۰۲۳-۰۳-۱۰'>۱۰ مارس ۲۰۲۳</time>
-              <!-- TODO: Calculate the reading time -->
-              <span>- خواندن ۲ دقیقه</span>
-            </footer>
-          </a>
-        </article>
-        <article>
-          <a href='#' class='block overflow-hidden'>
-            <img
-              src={placeholder}
-              alt=''
-              class='rounded-xl w-full transition-all ease-in-out hover:grayscale'
-            />
-            <div class='pt-4'>
-              <header>
-                <a href='#' class='text-sm'>دسته بندی</a>
-                <a
-                  href='#'
-                  class='transition-all ease-in hover:no-underline hover:opacity-90'>
-                  <h3 class='font-bold text-2xl'>عنوان پست</h3>
-                </a>
-              </header>
-              <p class='py-4 break-words'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
-                soluta, itaque ipsam maxime officia magni praesentium tempora ipsa
-                repudiandae hic dicta omnis ab iste cum consequatur nam id
-                consectetur sint.
-              </p>
-            </div>
-            <footer class='text-sm text-zinc-500'>
-              <time datetime='۲۰۲۳-۰۳-۱۰'>۱۰ مارس ۲۰۲۳</time>
-              <!-- TODO: Calculate the reading time -->
-              <span>- خواندن ۲ دقیقه</span>
-            </footer>
-          </a>
-        </article>
-        <article>
-          <a href='#' class='block overflow-hidden'>
-            <img
-              src={placeholder}
-              alt=''
-              class='rounded-xl w-full transition-all ease-in-out hover:grayscale'
-            />
-            <div class='pt-4'>
-              <header>
-                <a href='#' class='text-sm'>دسته بندی</a>
-                <a
-                  href='#'
-                  class='transition-all ease-in hover:no-underline hover:opacity-90'>
-                  <h3 class='font-bold text-2xl'>عنوان پست</h3>
-                </a>
-              </header>
-              <p class='py-4 break-words'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
-                soluta, itaque ipsam maxime officia magni praesentium tempora ipsa
-                repudiandae hic dicta omnis ab iste cum consequatur nam id
-                consectetur sint.
-              </p>
-            </div>
-            <footer class='text-sm text-zinc-500'>
-              <time datetime='۲۰۲۳-۰۳-۱۰'>۱۰ مارس ۲۰۲۳</time>
-              <!-- TODO: Calculate the reading time -->
-              <span>- خواندن ۲ دقیقه</span>
-            </footer>
-          </a>
-        </article>
-      </div>
+    <div
+      class='grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-10'
+      id='postsContainer'>
+    </div>
+
+    <script src='../scripts/getPosts.js'></script>
   </section>
 </MainLayout>
