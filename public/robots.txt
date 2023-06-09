@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://r3x4w.ir/sitemap-index.xml
