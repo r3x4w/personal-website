@@ -29,7 +29,7 @@ export default async function ProductsPage() {
       {
         products.map((product) => {
           return (
-            <div className='group relative'>
+            <div className='group relative' key={product.id}>
               <div className='relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none group-hover:opacity-75 dark:bg-zinc-900 lg:h-72'>
                 <img
                   src={product.image_url}

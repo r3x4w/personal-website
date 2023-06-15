@@ -42,7 +42,7 @@ export default async function Sidebar() {
         <div className='grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8'>
           {latestProjects.map((project) => {
             return (
-              <div className='group relative overflow-hidden'>
+              <div className='group relative overflow-hidden' key={project.id}>
                 <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none  dark:bg-zinc-900 lg:h-72'>
                   <img
                     src={project.image_url}
@@ -95,7 +95,7 @@ export default async function Sidebar() {
            {
         latestProducts.map((product) => {
           return (
-            <div className='group relative overflow-hidden'>
+            <div className='group relative overflow-hidden' key={product.id}>
               <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none  dark:bg-zinc-900 lg:h-72'>
                 <img
                   src={product.image_url}

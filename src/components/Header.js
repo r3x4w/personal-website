@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 
 export default function Header() {
   const [isShow, setIsShow] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(typeof window !== "undefined" ? window.localStorage.getItem('theme') : 'light');
   const isDarkMode = theme === 'dark' ? true : false
 
   useEffect(() => {

@@ -31,7 +31,7 @@ const projects = await prisma.projects.findMany({
        {
         projects.map((project) => {
           return (
-            <div className='group relative'>
+            <div className='group relative' key={project.id}>
               <div className='relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none group-hover:opacity-75 dark:bg-zinc-900 lg:h-72'>
                 <img
                   src={project.image_url}
