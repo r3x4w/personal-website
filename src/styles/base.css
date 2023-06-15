@@ -15,7 +15,7 @@
   }
 
   body {
-    @apply rtl flex min-h-screen flex-col overflow-x-hidden bg-white text-right font-vazirmatn text-base text-zinc-700 antialiased dark:bg-zinc-950 dark:text-zinc-300;
+    @apply rtl flex min-h-screen flex-col overflow-x-hidden md:!overflow-x-hidden md:!overflow-y-auto bg-white text-right font-vazirmatn text-base text-zinc-700 antialiased dark:bg-zinc-950 dark:text-zinc-300;
   }
 
   a {
@@ -82,7 +82,11 @@
   }
 
   .show {
-    @apply !flex;
+    @apply !flex md:!hidden;
+  }
+
+  button.show {
+    @apply rotate-90 text-white;
   }
 
   #toggleMenu.show {

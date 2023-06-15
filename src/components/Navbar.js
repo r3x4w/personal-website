@@ -1,17 +1,14 @@
-"use client"
-
 import Link from 'next/link'
 import {usePathname} from 'next/navigation'
 
-export default function Navbar() {
+export default function Navbar({isShow}) {
   const pathname = usePathname()
 
   return (
-    <nav className='hidden md:block'>
+    <nav className={`md:block absolute md:static ${isShow ? 'block' : 'hidden'}`}>
       <div
-        className='fixed inset-0 z-30 flex hidden items-center justify-center bg-zinc-950/70'
-        id='mobileNavContainer'>
-        <div id='mobileNav' className='w-4/5 animate-fadeInUp rounded-xl bg-white p-14 text-center shadow'>
+        className={`fixed inset-0 z-30 flex hidden items-center justify-center bg-zinc-950/70 ${isShow ? 'show' : ''}`}>
+        <div className='w-4/5 animate-fadeInUp rounded-xl bg-white p-14 text-center shadow'>
           <ul className='flex flex-col gap-6'>
             <li>
               <Link href='/' className={`d-menu-link ${pathname === '/' ? 'active' : ''}`}>

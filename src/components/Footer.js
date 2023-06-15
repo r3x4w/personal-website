@@ -1,26 +1,12 @@
+import ArrowUp from '@/components/ArrowUp'
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className='relative mx-6 mt-20 mt-32 space-y-16 rounded-t-2xl bg-zinc-950 pb-12 text-zinc-50 dark:bg-zinc-900 lg:mx-auto lg:w-full lg:max-w-5xl'>
       <div>
         <div className='absolute inset-x-1/2 -top-12 h-16 w-16 translate-x-1/2 rotate-45 rounded-xl bg-white dark:bg-zinc-950'></div>
-        <div
-          id='arrowUp'
-          className='absolute inset-x-1/2 -top-10 m-0 flex h-12 w-12 translate-x-1/2 rotate-45 items-center justify-center rounded-xl border-2 border-zinc-950 bg-white text-zinc-950 transition-colors ease-in-out hover:cursor-pointer hover:bg-zinc-950 hover:bg-zinc-950 hover:text-zinc-50 dark:border-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 dark:hover:bg-zinc-900'
-          title='Go to the top'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            fill='none'
-            stroke='currentColor'
-            strokeWidth='2'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            className='h-6 w-6 -rotate-45'>
-            <polyline points='18 15 12 9 6 15'></polyline>
-          </svg>
-        </div>
+        <ArrowUp />
       </div>
       <div className='grid grid-cols-1 place-items-center gap-12 sm:grid-cols-2 sm:place-items-baseline'>
         <div className='sm:mx-auto'>
@@ -57,9 +43,9 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href='/contact' target='_blank'>
+              <Link href='/contact'>
                 فرم تماس با من
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

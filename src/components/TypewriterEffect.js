@@ -13,7 +13,8 @@ export default function TypewriterEffect() {
             'کاربر گنو/لینوکس',
             'علاقه مند به نرم افزار های آزاد',
             'برنامه نویس دون پایه پایتون',
-            'هنرجوی شبکه و نرم افزار درحد ping 192.168.1.1',
+            'هنرجوی سابق شبکه و نرم افزار',
+            'در حال تلاش برای Full Stack JS Developer شدن'
           ],
           autoStart: true,
           loop: true,

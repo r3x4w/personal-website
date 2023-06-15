@@ -4,6 +4,13 @@ import Footer from '@/components/Footer';
 
 import '@/styles/base.css'
 
+export const metadata = {
+  title: {
+    template: '%s | رکسا',
+    default: 'بدون عنوان'
+  }
+}
+
 export default function RootLayout({ children }) {
   // useEffect(() => {
   //   const currentTheme = localStorage.getItem('theme');
