@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client'
+import {prisma} from '@/utils/db.server.js';
 import Link from 'next/link'
 
 export const metadata = {
@@ -7,7 +7,6 @@ export const metadata = {
 }
 
 export default async function ProductsPage() {
-    const prisma = new PrismaClient()
   const products = await prisma.products.findMany({
     where: {
       published: true

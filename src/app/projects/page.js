@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client'
+import {prisma} from '@/utils/db.server.js';
 import Link from 'next/link'
 
 export const metadata = {
@@ -8,7 +8,6 @@ export const metadata = {
 
 
 export default async function ProjectsPage() {
-const prisma = new PrismaClient()
 const projects = await prisma.projects.findMany({
   where: {
     published: true

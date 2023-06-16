@@ -1,8 +1,7 @@
-import { PrismaClient } from '@prisma/client';
+import {prisma} from '@/utils/db.server.js';
 import Link from 'next/link';
 
 async function handler(slug){
-	const prisma = new PrismaClient();
 	const project = await prisma.projects.findFirst({
 		where: {
 			AND: [

@@ -1,13 +1,17 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export default function Header() {
   const [isShow, setIsShow] = useState(false);
-  const [theme, setTheme] = useState(typeof window !== "undefined" ? window.localStorage.getItem('theme') : 'light');
+  const [theme, setTheme] = useState('light');
   const isDarkMode = theme === 'dark' ? true : false
+
+  useLayoutEffect(() => {
+    setTheme(localStorage.getItem('theme') || 'light')
+  }, [])
 
   useEffect(() => {
     if (isShow) {
@@ -17,7 +21,7 @@ export default function Header() {
     }
   }, [isShow]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')
     } else {
