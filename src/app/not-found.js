@@ -1,5 +1,3 @@
 export default function NotFoundPage() {
-  return (
-    <h1>Page Not Found - Error 404</h1>
-  )
+  return <h1>صفحه مورد نظر پیدا نشد :(</h1>;
 }

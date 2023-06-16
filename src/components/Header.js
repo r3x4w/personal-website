@@ -7,11 +7,11 @@ import Navbar from '@/components/Navbar';
 export default function Header() {
   const [isShow, setIsShow] = useState(false);
   const [theme, setTheme] = useState('light');
-  const isDarkMode = theme === 'dark' ? true : false
+  const isDarkMode = theme === 'dark' ? true : false;
 
   useLayoutEffect(() => {
-    setTheme(localStorage.getItem('theme') || 'light')
-  }, [])
+    setTheme(localStorage.getItem('theme') || 'light');
+  }, []);
 
   useEffect(() => {
     if (isShow) {
@@ -23,20 +23,20 @@ export default function Header() {
 
   useLayoutEffect(() => {
     if (theme === 'dark') {
-      document.documentElement.classList.add('dark')
+      document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove('dark');
     }
 
-    localStorage.setItem('theme', theme)
-  }, [theme])
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   const handleToggleMenu = (e) => {
     setIsShow((prevIsShow) => !prevIsShow);
   };
 
   const handleToggleDarkMode = () => {
-    setTheme(isDarkMode ? 'light' : 'dark')
+    setTheme(isDarkMode ? 'light' : 'dark');
   };
 
   return (

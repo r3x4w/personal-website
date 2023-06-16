@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import Typewriter from 'typewriter-effect';
 
@@ -14,7 +14,7 @@ export default function TypewriterEffect() {
             'علاقه مند به نرم افزار های آزاد',
             'برنامه نویس دون پایه پایتون',
             'هنرجوی سابق شبکه و نرم افزار',
-            'در حال تلاش برای Full Stack JS Developer شدن'
+            'در حال تلاش برای Full Stack JS Developer شدن',
           ],
           autoStart: true,
           loop: true,

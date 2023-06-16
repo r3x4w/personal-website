@@ -4,7 +4,7 @@ import Tag from '@/components/Tag';
 
 export const metadata = {
   title: 'رزومه',
-  description: '',
+  description: 'توسعه دهنده جونیور فرانت-اند، برنامه نویس جونیور پایتون، کاربر گنو/لینوکس، هنرجوی رشته شبکه و نرم افزار، علاقه',
 };
 
 export default function ResumePage() {
@@ -13,8 +13,8 @@ export default function ResumePage() {
       <section className='py-8' id='bioSection'>
         <h2 className='arrow-left pb-6 text-2xl font-bold'>بیوگرافی</h2>
         <p>
-          توسعه دهنده جونیور فرانت-اند، برنامه نویس جونیور پایتون، کاربر گنو/لینوکس، هنرجوی رشته شبکه و نرم افزار،
-          علاقه مند به کار تیمی و استارت آپ همچنین تجربه کارآموزی به عنوان پسیو/اکتیو کار شبکه.
+          توسعه دهنده جونیور فرانت-اند، برنامه نویس جونیور پایتون، کاربر گنو/لینوکس، هنرجوی رشته شبکه و نرم افزار، علاقه
+          مند به کار تیمی و استارت آپ همچنین تجربه کارآموزی به عنوان پسیو/اکتیو کار شبکه.
         </p>
       </section>
       <section className='py-8' id='expSection'>

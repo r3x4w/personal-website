@@ -1,37 +1,34 @@
-import {prisma} from '@/utils/db.server.js';
-import Link from 'next/link'
+import { prisma } from '@/utils/db.server.js';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'پروژه ها',
-  description: ''
-}
-
+  description: 'پروژه هایی که توسط من طراحی و توسعه داده شده',
+};
 
 export default async function ProjectsPage() {
-const projects = await prisma.projects.findMany({
-  where: {
-    published: true
-  },
-  orderBy: [
+  const projects = await prisma.projects.findMany({
+    where: {
+      published: true,
+    },
+    orderBy: [
       {
-        publish_date: 'desc'   
-      }
-    ]
-});
+        publish_date: 'desc',
+      },
+    ],
+  });
 
   return (
     <section className='pt-12'>
-    <div className='pb-28 text-center'>
-      <h1 className='pb-4 text-3xl text-zinc-950'>پروژه ها</h1>
-      <p>پروژه هایی که توسط من طراحی و توسعه داده شده</p>
-    </div>
-    <div
-      className='grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3'>
-       {
-        projects.map((project) => {
+      <div className='pb-28 text-center'>
+        <h1 className='pb-4 text-3xl text-zinc-950'>پروژه ها</h1>
+        <p>پروژه هایی که توسط من طراحی و توسعه داده شده</p>
+      </div>
+      <div className='grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3'>
+        {projects.map((project) => {
           return (
             <div className='group relative' key={project.id}>
-              <div className='relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none group-hover:opacity-75 dark:bg-zinc-900 lg:h-72'>
+              <div className='aspect-h-1 aspect-w-1 relative w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none group-hover:opacity-75 dark:bg-zinc-900 lg:h-72'>
                 <img
                   src={project.image_url}
                   alt={project.title}
@@ -46,18 +43,14 @@ const projects = await prisma.projects.findMany({
                     {project.title}
                   </Link>
                 </h2>
-                <Link
-                  href={project.preview_url || '#'}
-                  className='z-10 flex-none text-sm'
-                  target='_blank'>
+                <Link href={project.preview_url || '#'} className='z-10 flex-none text-sm' target='_blank'>
                   پیش نمایش زنده
                 </Link>
               </div>
             </div>
           );
-        })
-      } 
-    </div>
-  </section>
-  )
+        })}
+      </div>
+    </section>
+  );
 }

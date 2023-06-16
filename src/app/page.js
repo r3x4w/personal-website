@@ -1,9 +1,9 @@
-import TypewriterEffect from '@/components/TypewriterEffect'
-import Link from 'next/link'
+import TypewriterEffect from '@/components/TypewriterEffect';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'صفحه اصلی | رکسا',
-  description: '',
+  description: 'اینجا می تونید به رزومه، نمونه کار ها، محصولات، پادکست ها و آخرین مقالات من دسترسی داشته باشید.',
 };
 
 export default function HomePage() {

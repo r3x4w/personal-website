@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://r3x4w.ir/sitemap-index.xml
+# Host
+Host: https://r3x4w.ir
+
+# Sitemaps
+Sitemap: https://r3x4w.ir/sitemap.xml

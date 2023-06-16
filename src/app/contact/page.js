@@ -1,9 +1,9 @@
-import ContactForm from '@/components/ContactForm'
+import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'تماس با من'
-}
-
+  title: 'تماس با من',
+  description: 'در این قسمت می تونید راه های برقراری تماس با من رو ببینید'
+};
 
 export default function ContactPage() {
   return (
