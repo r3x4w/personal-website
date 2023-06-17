@@ -38,7 +38,7 @@ export default async function ProjectDetailPage({ params }) {
     <div className='grid grid-cols-1 gap-6 sm:grid-cols-12 sm:gap-x-8 sm:pt-12'>
       <div className='aspect-h-1 aspect-w-1 relative w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none dark:bg-zinc-900 sm:order-1 sm:col-span-7 lg:h-80'>
         <img
-          src={project.image_url}
+          src={`/images/projects/${project.image_url}`}
           alt={project.title}
           className='h-full w-full object-cover object-center lg:h-full lg:w-full'
           loading='lazy'

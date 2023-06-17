@@ -2,20 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Vazirmatn';
-  src: url('/fonts/vazirmatn.woff2');
-  font-style: normal;
-  font-display: swap;
-}
-
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply !scroll-smooth;
   }
 
   body {
-    @apply rtl flex min-h-screen flex-col overflow-x-hidden bg-white text-right font-vazirmatn text-base text-zinc-700 antialiased dark:bg-zinc-950 dark:text-zinc-300 md:!overflow-y-auto md:!overflow-x-hidden;
+    @apply flex min-h-screen flex-col overflow-x-hidden bg-white text-right font-vazirmatn text-base text-zinc-700 antialiased dark:bg-zinc-950 dark:text-zinc-300 md:!overflow-y-auto md:!overflow-x-hidden;
   }
 
   a {

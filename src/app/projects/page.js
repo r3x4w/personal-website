@@ -30,7 +30,7 @@ export default async function ProjectsPage() {
             <div className='group relative' key={project.id}>
               <div className='aspect-h-1 aspect-w-1 relative w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none group-hover:opacity-75 dark:bg-zinc-900 lg:h-72'>
                 <img
-                  src={project.image_url}
+                  src={`/images/projects/${project.image_url}`}
                   alt={project.title}
                   className='h-full w-full object-cover object-center lg:h-full lg:w-full'
                   loading='lazy'

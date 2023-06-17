@@ -44,7 +44,7 @@ export default async function Sidebar() {
               <div className='group relative overflow-hidden' key={project.id}>
                 <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none  dark:bg-zinc-900 lg:h-72'>
                   <img
-                    src={project.image_url}
+                    src={`/images/projects/${project.image_url}`}
                     alt={project.title}
                     className='h-full w-full object-cover object-center lg:h-full lg:w-full'
                   />
@@ -96,7 +96,7 @@ export default async function Sidebar() {
               <div className='group relative overflow-hidden' key={product.id}>
                 <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-xl bg-gray-200 lg:aspect-none  dark:bg-zinc-900 lg:h-72'>
                   <img
-                    src={product.image_url}
+                   src={`/images/products/${product.image_url}`}
                     alt={product.title}
                     className='h-full w-full object-cover object-center lg:h-full lg:w-full'
                   />

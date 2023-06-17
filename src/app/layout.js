@@ -1,8 +1,16 @@
+import localFont from 'next/font/local'
+
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import Footer from '@/components/Footer';
 
 import './global.css';
+
+export const vazir = localFont({
+  src: './vazirmatn.woff2',
+  display: 'swap',
+  variable: '--font-vazirmatn'
+})
 
 export const metadata = {
   title: {
@@ -14,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang='fa'>
+    <html lang='fa' className={vazir.variable} dir="rtl">
       <head>
         <meta charSet='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
