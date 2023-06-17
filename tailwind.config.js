@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        vazirmatn: ['Vazirmatn', ...defaultTheme.fontFamily.sans],
+        vazirmatn: ['var(--font-vazirmatn)', ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         fadeInUp: {
