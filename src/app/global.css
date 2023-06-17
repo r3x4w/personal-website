@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply flex min-h-screen flex-col overflow-x-hidden bg-white text-right text-base text-zinc-700 antialiased dark:bg-zinc-950 dark:text-zinc-300 md:!overflow-y-auto md:!overflow-x-hidden;
+    @apply flex min-h-screen flex-col overflow-x-hidden bg-white text-right font-vazirmatn text-base text-zinc-700 antialiased dark:bg-zinc-950 dark:text-zinc-300 md:!overflow-y-auto md:!overflow-x-hidden;
   }
 
   a {
