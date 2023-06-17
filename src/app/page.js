@@ -17,7 +17,7 @@ export default function HomePage() {
           بریم کشف کنیم
         </Link>
         <Link
-          href='#latestProjects'
+          href='/#latestProjects'
           className='btn mx-1 border-2 border-zinc-950 text-zinc-950 hover:bg-zinc-100 dark:border-zinc-50 dark:text-zinc-50 dark:hover:bg-zinc-800'>
           میشناسمت
         </Link>
